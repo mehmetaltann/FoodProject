@@ -1,3 +1,3 @@
-import { exampleRoute } from "./exampleRoute";
+import { getMealsRoute } from "./meals/getMealsRoute.js";
 
-export const routes = [exampleRoute];
+export const routes = [getMealsRoute];

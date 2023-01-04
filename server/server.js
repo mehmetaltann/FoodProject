@@ -1,7 +1,7 @@
 import bodyParser from "body-parser";
 import express from "express";
-import { db, DB_Adress } from "./db/db.js";
 import { routes } from "./routes/index.js";
+import { db } from "./db/database.js";
 
 const app = express();
 const port = 3001;
@@ -13,7 +13,7 @@ routes.forEach((route) => {
 });
 
 const start = async () => {
-  await db.connect(DB_Adress);
+  await db.connect()
   app.listen(port, () => {
     console.log("Server 3001 Portunda Çalışıyor");
   });
