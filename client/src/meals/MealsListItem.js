@@ -13,7 +13,7 @@ const MealsListItem = (props) => {
             <button
               className="arrow-button"
               onClick={() => console.log("yemek ekle")}
-            ></button>
+            > == </button>
             <div className="right-action">
               <ButtonX
                 onClick={() => {
