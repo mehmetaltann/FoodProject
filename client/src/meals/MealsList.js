@@ -1,10 +1,15 @@
 import React from "react";
 import MealsListItem from "./MealsListItem";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const MealsList = (props) => {
   const onDeleteMealHandler = async (id) => {
-    console.log("on delete çağırıldı");
+    axios
+      .delete(`http://localhost:3001/deleteMeals?id=${id}`)
+      .then((response) => {
+        props.setMeals(response.data);
+      });
   };
 
   return (

@@ -1,34 +1,24 @@
 import { Fragment, useContext } from "react";
+import { MealContext } from "../store/MealContext";
 import BackButton from "../UI/BackButton";
 import ButtonX from "../UI/ButtonX";
-import { MealContext } from "../store/MealContext";
 
-const MealsListItem = (props) => {
-  const { selectedMeal, setSelectedMeal } = useContext(MealContext);
-
+const IngredientsListItem = (props) => {
   return (
     <Fragment>
       <div className="list-item">
         {props.meal ? (
           <>
-            <img
-              src={props.meal.imageURL}
-              height={100}
-              width={100}
-              alt="Altan"
-            />
+            <img src={props.meal.imageURL} height={100} width={100} alt="Altan" />
             <h3>{props.meal.name}</h3>
             <button
               className="arrow-button"
-              onClick={() => setSelectedMeal(props.meal)}
-            >
-              {" "}
-              =={" "}
-            </button>
+              onClick={() => console.log("yemek ekle")}
+            > == </button>
             <div className="right-action">
               <ButtonX
                 onClick={() => {
-                  props.onDeleteMeal(props.meal._id);
+                  console.log("yemek ekle");
                 }}
               />
             </div>
@@ -41,4 +31,4 @@ const MealsListItem = (props) => {
   );
 };
 
-export default MealsListItem;
+export default IngredientsListItem;
