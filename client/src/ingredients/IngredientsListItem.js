@@ -7,24 +7,20 @@ const IngredientsListItem = (props) => {
   return (
     <Fragment>
       <div className="list-item">
-        {props.meal ? (
+        {props.ingredientObject ? (
           <>
-            <img src={props.meal.imageURL} height={100} width={100} alt="Altan" />
-            <h3>{props.meal.name}</h3>
-            <button
-              className="arrow-button"
-              onClick={() => console.log("yemek ekle")}
-            > == </button>
+            <h3>{props.ingredientObject.name}</h3>
+            <h5>{props.ingredientObject.quantity}</h5>
             <div className="right-action">
               <ButtonX
                 onClick={() => {
-                  console.log("yemek ekle");
+                  props.onDeleteIngredient(props.ingredientObject.name);
                 }}
               />
             </div>
           </>
         ) : (
-          <h1>Listede Yemek Bulunmuyor</h1>
+          <h3>İçerik Bulunmuyor !!!</h3>
         )}
       </div>
     </Fragment>
