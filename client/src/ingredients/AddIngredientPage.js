@@ -8,7 +8,7 @@ import axios from "axios";
 const unitOptions = ["pounds", "cups", "tablespoon", "teaspoon", "count"];
 
 const AddIngredientPage = () => {
-  const { selectedMeal, setSelectedMeal } = useContext(MealContext);
+  const { selectedMeal } = useContext(MealContext);
   const [ingredientName, setIngredientName] = useState("");
   const [ingredientQuantity, setIngredientQuantity] = useState(0);
   const [unit, setUnit] = useState(unitOptions[0]);

@@ -1,6 +1,7 @@
 import React from "react";
 import MealsList from "../meals/MealsList";
 import IngredientList from "../ingredients/IngredientsList";
+import StepList from "../steps/StepList";
 import { useMeals } from "../meals/useMeals";
 
 const HomePage = () => {
@@ -15,11 +16,10 @@ const HomePage = () => {
         />
       </div>
       <div className="column">
-        <IngredientList
-          meals={meals}
-          isLoadingMeals={isLoadingMeals}
-          setMeals={setMeals}
-        />
+        <IngredientList />
+      </div>
+      <div className="column">
+        <StepList />
       </div>
     </div>
   );
