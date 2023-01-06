@@ -9,7 +9,6 @@ export const useMeals = () => {
     axios.get(`http://localhost:3001/meals`).then((response) => {
       setMeals(response.data);
       setIsLoading(false);
-      console.log(meals);
     });
   },[]);
 

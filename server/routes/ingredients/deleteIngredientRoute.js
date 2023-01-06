@@ -3,7 +3,7 @@ import { getMeals } from "../../db/meals/getMeals.js";
 
 export const deleteIngredientRoute = {
   method: "delete",
-  path: "/deleteIngedient",
+  path: "/deleteIngredient",
   handler: async (req, res) => {
     const ingredientName = req.query.name;
     const mealId = req.query.id;

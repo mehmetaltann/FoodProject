@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const BackButton = () => {
+export const BackButton = () => {
   const navigate = useNavigate();
   return (
     <button
@@ -10,8 +10,6 @@ const BackButton = () => {
         event.preventDefault();
         navigate(-1);
       }}
-    ></button>
+    >Geri</button>
   );
 };
-
-export default BackButton;
