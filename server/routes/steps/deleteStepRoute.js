@@ -5,9 +5,9 @@ export const deleteStepRoute = {
   method: "delete",
   path: "/deleteStep",
   handler: async (req, res) => {
-    const stepText = req.query.text;
     const mealId = req.query.id;
-    await deleteStep(stepText, mealId);
+    const deletedStep = { text : req.query.text}
+    await deleteStep(deletedStep, mealId);
     const updatedMeals = await getMeals();
     res.status(200).json(updatedMeals);
   },

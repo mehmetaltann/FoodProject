@@ -8,7 +8,6 @@ const StepList = () => {
   const { selectedMeal, setSelectedMeal } = useContext(MealContext);
 
   const deleteStepHandler = async (stepText) => {
-    
 
     axios
     .delete(
@@ -23,7 +22,6 @@ const StepList = () => {
     });
   }
 
-
   return (
     <div className="list-container">
       <h1> Tarif Adımları </h1>
@@ -35,7 +33,7 @@ const StepList = () => {
         <p>Tarif Yok</p>
       )}
 
-      {selectedMeal && selectedMeal.steps ? (
+      {selectedMeal ? (
         <div>
           <Link to={`/addStep?mealId=${selectedMeal._id}`}>
             <button>Ekle</button>

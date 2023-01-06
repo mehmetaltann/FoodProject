@@ -3,22 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@mui/icons-material":"^5.11.0",
-    "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.11.2",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
     "axios": "^1.2.1",
-    "formik": "^2.2.9",
+    "immer": "^9.0.17",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.6.0",
     "react-script": "^2.0.5",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^0.2.4",
-    "yup": "^0.32.11"
+    "shortid": "^2.2.16"
   },
   "scripts": {
     "start": "react-scripts start",

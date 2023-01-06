@@ -1,10 +1,9 @@
 import { Fragment, useContext } from "react";
-import BackButton from "../UI/BackButton";
 import ButtonX from "../UI/ButtonX";
 import { MealContext } from "../store/MealContext";
 
 const MealsListItem = (props) => {
-  const { selectedMeal, setSelectedMeal } = useContext(MealContext);
+  const { setSelectedMeal } = useContext(MealContext);
 
   return (
     <Fragment>
@@ -29,6 +28,7 @@ const MealsListItem = (props) => {
               <ButtonX
                 onClick={() => {
                   props.onDeleteMeal(props.meal._id);
+                  setSelectedMeal(null);
                 }}
               />
             </div>

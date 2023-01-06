@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./home/HomePage";
 import AddIngredientPage from "./ingredients/AddIngredientPage";
 import AddStepPage from "./steps/AddStepPage";
+import AddMealPage from "./meals/AddMealPage";
 
 const routes = [
   {
@@ -15,6 +16,10 @@ const routes = [
   {
     path: "/addStep",
     component: AddStepPage,
+  },
+  {
+    path: "/addMeal",
+    component: AddMealPage,
   },
 ];
 

@@ -17,7 +17,7 @@ const AddStepPage = () => {
       .post(`http://localhost:3001/addStep?mealId=${id}`, newStep)
       .then((response) => {
         console.log("Başarılı");
-        selectedMeal.steps.push(stepText);
+        selectedMeal.steps.push(newStep.text);
         alert("Yeni İçerik Eklendi");
         navigate("/");
       })
